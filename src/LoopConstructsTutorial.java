@@ -2,7 +2,7 @@ public class LoopConstructsTutorial {
 
 
     /**
-     * Resources
+     * Resources/Reading Material
      * https://ocaprep.wordpress.com/java-basics/chap-05-using-loop-constructs/
      * https://livebook.manning.com/book/java-se-11-programmer-i-certification-guide/chapter-6/v-1/
      * https://www.w3schools.com/java/java_while_loop.asp
@@ -14,25 +14,33 @@ public class LoopConstructsTutorial {
      * https://www.cs.cornell.edu/courses/JavaAndDS/loops/01aloop1.html
      */
 
-    public static void main(String[] args){
+    private static String [] countries;
 
-        whileLoop();
+    public static void main(String[] args){
+        countries = new String[]{"Ireland", "England", "France", "Spain", "Germany", "USA"};
+        forLoop();
+        //doWhileLoop();
 
     }
 
-    private static void whileLoop(){
+    private static void forLoop(){
+
+    }
+
+    private static void enhancedForLoop(){
+
+
+    }
+
+    private static void doWhileLoop(){
         boolean continueLooping = true;
-        int counter = 1;
+        int counter = 0;
 
         do{
-            System.out.println(counter);
-
-//            https://www.cs.cornell.edu/courses/JavaAndDS/explainJava/explainJava.html
-
-            //https://www.youtube.com/watch?v=OIP2ZaweCNE
+            System.out.println(countries[counter]);
 
             counter++;
-            if(counter == 10)
+            if(counter == countries.length)
                 continueLooping = false;
         }while(continueLooping);
     }
